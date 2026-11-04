@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>№935 Сайлау учаскесі</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #0056b3;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 20px;
+            color: #0056b3;
+        }
+        .header p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .menu-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .menu-title {
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 15px;
+            color: #1a252f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .menu-title:hover {
+            background-color: #eef4fc;
+        }
+        .menu-title::after {
+            content: '▼';
+            font-size: 12px;
+            color: #0056b3;
+            transition: transform 0.3s;
+        }
+        .menu-item.active .menu-title::after {
+            transform: rotate(180deg);
+        }
+        .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #ffffff;
+            padding: 0 20px;
+            border-top: 1px solid transparent;
+        }
+        .menu-item.active .menu-content {
+            padding: 15px 20px;
+            border-top-color: #e9ecef;
+            max-height: 2000px;
+        }
+        .menu-content p, .menu-content ul {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        .menu-content ul {
+            padding-left: 20px;
+        }
+        /* Суреттер стилі */
+        .content-img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+        /* Файл жүктеу батырмалары */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #0056b3;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 8px;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #004085;
+        }
+        .download-btn.word {
+            background-color: #2b579a;
+        }
+        .download-btn.word:hover {
+            background-color: #1e3d6b;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>№935 Сайлау учаскесі</h1>
+        <p>Ақпараттық портал</p>
+    </div>
+
+    <!-- 1-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title">1. Комиссия мүшелері туралы ақпарат</div>
+        <div class="menu-content">
+            <p>Мұнда комиссия құрамы туралы мәтін жазылады...</p>
+
+            <!-- 📷 СУРЕТ: Егер сурет қоссаңыз, төмендегі жолды ашып, сурет атын жазыңыз -->
+            <!-- <img src="komissiya.jpg" alt="Комиссия фотосы" class="content-img"> -->
+
+            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
+            <a href="komissiya.pdf" download class="download-btn">
+                📄 Комиссия тізімін жүктеу (PDF)
+            </a>
+
+            <!-- 📝 WORD ЖҮКТЕУ БАТЫРМАСЫ -->
+            <a href="komissiya.docx" download class="download-btn word">
+                📝 Тізімді жүктеу (Word)
+            </a>
+        </div>
+    </div>
+
+    <!-- 2-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title">2. Жоғары тұрған комиссиялар туралы ақпарат</div>
+        <div class="menu-content">
+            <p>Жоғары тұрған комиссиялардың мекенжайы мен байланыс телефондары...</p>
+
+            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
+            <a href="zhogargy_komissiya.pdf" download class="download-btn">
+                📄 Ақпаратты жүктеу (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- 3-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title">3. Кандидаттар туралы ақпарат</div>
+        <div class="menu-content">
+            <p>Кандидаттардың тізімі мен қысқаша өмірбаяны...</p>
+
+            <!-- 📷 СУРЕТ -->
+            <!-- <img src="kandidattar.jpg" alt="Кандидаттар" class="content-img"> -->
+
+            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
+            <a href="kandidattar.pdf" download class="download-btn">
+                📄 Кандидаттар тізімін жүктеу (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- 4-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title">4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері</div>
+        <div class="menu-content">
+            <p>Тәртіп ережелері туралы ақпарат...</p>
+
+            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
+            <a href="eredzheler.pdf" download class="download-btn">
+                📄 Ережелерді жүктеу (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- 5-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title">5. Бюллютень үлгілері</div>
+        <div class="menu-content">
+            <p>Бюллетеньді толтыру тәртібі мен үлгісі:</p>
+
+            <!-- 📷 БЮЛЛЕТЕНЬ СУРЕТІ -->
+            <!-- <img src="byulleten.jpg" alt="Бюллетень үлгісі" class="content-img"> -->
+
+            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
+            <a href="byulleten_ulgisi.pdf" download class="download-btn">
+                📄 Бюллетень үлгісін жүктеу (PDF)
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Сайлау учаскесі
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.menu-title').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            document.querySelectorAll('.menu-item').forEach(child => {
+                if (child !== parent) {
+                    child.classList.remove('active');
+                }
+            });
+            parent.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
