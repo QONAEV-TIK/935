@@ -85,24 +85,14 @@
             border-top-color: #e9ecef;
             max-height: 2000px;
         }
-        .menu-content p, .menu-content ul {
+        .menu-content p {
             font-size: 14px;
             line-height: 1.6;
             color: #495057;
             margin-bottom: 10px;
         }
-        .menu-content ul {
-            padding-left: 20px;
-        }
-        /* Суреттер стилі */
-        .content-img {
-            width: 100%;
-            border-radius: 8px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-        }
-        /* Файл жүктеу батырмалары */
-        .download-btn {
+        /* PDF батырмасының стилі */
+        .view-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -110,22 +100,16 @@
             background-color: #0056b3;
             color: #ffffff;
             text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 6px;
-            font-size: 13px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 14px;
             font-weight: bold;
-            margin-top: 8px;
+            margin-top: 5px;
             width: 100%;
             transition: background 0.2s;
         }
-        .download-btn:hover {
+        .view-btn:hover {
             background-color: #004085;
-        }
-        .download-btn.word {
-            background-color: #2b579a;
-        }
-        .download-btn.word:hover {
-            background-color: #1e3d6b;
         }
         .footer {
             text-align: center;
@@ -147,19 +131,9 @@
     <div class="menu-item">
         <div class="menu-title">1. Комиссия мүшелері туралы ақпарат</div>
         <div class="menu-content">
-            <p>Мұнда комиссия құрамы туралы мәтін жазылады...</p>
-
-            <!-- 📷 СУРЕТ: Егер сурет қоссаңыз, төмендегі жолды ашып, сурет атын жазыңыз -->
-            <!-- <img src="komissiya.jpg" alt="Комиссия фотосы" class="content-img"> -->
-
-            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
-            <a href="komissiya.pdf" download class="download-btn">
-                📄 Комиссия тізімін жүктеу (PDF)
-            </a>
-
-            <!-- 📝 WORD ЖҮКТЕУ БАТЫРМАСЫ -->
-            <a href="komissiya.docx" download class="download-btn word">
-                📝 Тізімді жүктеу (Word)
+            <p>Құжатты экраннан ашып қарау үшін төмендегі батырманы басыңыз:</p>
+            <a href="komissiya.pdf" target="_blank" class="view-btn">
+                📄 Комиссия тізімін қарау (PDF)
             </a>
         </div>
     </div>
@@ -168,11 +142,9 @@
     <div class="menu-item">
         <div class="menu-title">2. Жоғары тұрған комиссиялар туралы ақпарат</div>
         <div class="menu-content">
-            <p>Жоғары тұрған комиссиялардың мекенжайы мен байланыс телефондары...</p>
-
-            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
-            <a href="zhogargy_komissiya.pdf" download class="download-btn">
-                📄 Ақпаратты жүктеу (PDF)
+            <p>Құжатты экраннан ашып қарау үшін төмендегі батырманы басыңыз:</p>
+            <a href="zhogargy_komissiya.pdf" target="_blank" class="view-btn">
+                📄 Ақпаратты қарау (PDF)
             </a>
         </div>
     </div>
@@ -181,14 +153,9 @@
     <div class="menu-item">
         <div class="menu-title">3. Кандидаттар туралы ақпарат</div>
         <div class="menu-content">
-            <p>Кандидаттардың тізімі мен қысқаша өмірбаяны...</p>
-
-            <!-- 📷 СУРЕТ -->
-            <!-- <img src="kandidattar.jpg" alt="Кандидаттар" class="content-img"> -->
-
-            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
-            <a href="kandidattar.pdf" download class="download-btn">
-                📄 Кандидаттар тізімін жүктеу (PDF)
+            <p>Кандидаттар тізімін ашып қарау:</p>
+            <a href="kandidattar.pdf" target="_blank" class="view-btn">
+                📄 Кандидаттар тізімін қарау (PDF)
             </a>
         </div>
     </div>
@@ -197,11 +164,9 @@
     <div class="menu-item">
         <div class="menu-title">4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері</div>
         <div class="menu-content">
-            <p>Тәртіп ережелері туралы ақпарат...</p>
-
-            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
-            <a href="eredzheler.pdf" download class="download-btn">
-                📄 Ережелерді жүктеу (PDF)
+            <p>Ережелерді ашып қарау:</p>
+            <a href="eredzheler.pdf" target="_blank" class="view-btn">
+                📄 Тәртіп ережелерін қарау (PDF)
             </a>
         </div>
     </div>
@@ -210,14 +175,9 @@
     <div class="menu-item">
         <div class="menu-title">5. Бюллютень үлгілері</div>
         <div class="menu-content">
-            <p>Бюллетеньді толтыру тәртібі мен үлгісі:</p>
-
-            <!-- 📷 БЮЛЛЕТЕНЬ СУРЕТІ -->
-            <!-- <img src="byulleten.jpg" alt="Бюллетень үлгісі" class="content-img"> -->
-
-            <!-- 📄 PDF ЖҮКТЕУ БАТЫРМАСЫ -->
-            <a href="byulleten_ulgisi.pdf" download class="download-btn">
-                📄 Бюллетень үлгісін жүктеу (PDF)
+            <p>Бюллетень үлгісін ашып қарау:</p>
+            <a href="byulleten_ulgisi.pdf" target="_blank" class="view-btn">
+                📄 Бюллетень үлгісін қарау (PDF)
             </a>
         </div>
     </div>
