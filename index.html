@@ -52,13 +52,14 @@
         .menu-title {
             padding: 15px 20px;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             color: #1a252f;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
             user-select: none;
+            line-height: 1.4;
         }
         .menu-title:hover {
             background-color: #eef4fc;
@@ -67,6 +68,7 @@
             content: '▼';
             font-size: 12px;
             color: #0056b3;
+            margin-left: 10px;
             transition: transform 0.3s;
         }
         .menu-item.active .menu-title::after {
@@ -85,13 +87,15 @@
             border-top-color: #e9ecef;
             max-height: 2000px;
         }
-        .menu-content p {
+        .sub-title {
             font-size: 14px;
-            line-height: 1.6;
-            color: #495057;
-            margin-bottom: 10px;
+            font-weight: bold;
+            color: #0056b3;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
         }
-        /* PDF батырмасының стилі */
         .view-btn {
             display: inline-flex;
             align-items: center;
@@ -100,11 +104,12 @@
             background-color: #0056b3;
             color: #ffffff;
             text-decoration: none;
-            padding: 12px 15px;
+            padding: 11px 15px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
-            margin-top: 5px;
+            margin-top: 6px;
+            margin-bottom: 8px;
             width: 100%;
             transition: background 0.2s;
         }
@@ -129,43 +134,48 @@
 
     <!-- 1-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">1. Комиссия мүшелері туралы ақпарат</div>
+        <div class="menu-title">1. №935 сайлау комиссиясының құрамы</div>
         <div class="menu-content">
-            <p>Құжатты экраннан ашып қарау үшін төмендегі батырманы басыңыз:</p>
             <a href="komissiya.pdf" target="_blank" class="view-btn">
-                📄 Комиссия тізімін қарау (PDF)
+                📄 Комиссия құрамын қарау (PDF)
             </a>
         </div>
     </div>
 
     <!-- 2-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">2. Жоғары тұрған комиссиялар туралы ақпарат</div>
+        <div class="menu-title">2. Жоғары тұрған сайлау комиссияларының, соттардың, прокуратура мен құқық қорғау органдарының мекенжайлары мен телефондары</div>
         <div class="menu-content">
-            <p>Құжатты экраннан ашып қарау үшін төмендегі батырманы басыңыз:</p>
-            <a href="zhogargy_komissiya.pdf" target="_blank" class="view-btn">
-                📄 Ақпаратты қарау (PDF)
+            <a href="zhogargy_organdar.pdf" target="_blank" class="view-btn">
+                📄 Байланыс деректерін қарау (PDF)
             </a>
         </div>
     </div>
 
-    <!-- 3-БӨЛІМ -->
+   <!-- 3-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">3. Кандидаттар туралы ақпарат</div>
+        <div class="menu-title">3. Партиялық тізімдерді ұсынған саяси партиялар мен кандидаттар туралы ақпарат</div>
         <div class="menu-content">
-            <p>Кандидаттар тізімін ашып қарау:</p>
-            <a href="kandidattar.pdf" target="_blank" class="view-btn">
-                📄 Кандидаттар тізімін қарау (PDF)
+            
+            <!-- 3.1 Алматы облысы -->
+            <div class="sub-title">📌 Алматы облыстық мәслихатының депутаттығына кандидаттар:</div>
+            <a href="kandidattar_oblys.pdf" target="_blank" class="view-btn">
+                📄 Облыстық кандидаттар тізімін қарау (PDF)
             </a>
+
+            <!-- 3.2 Қонаев қаласы -->
+            <div class="sub-title">📌 Қонаев қалалық мәслихатының депутаттығына кандидаттар:</div>
+            <a href="kandidattar_qonaev.pdf" target="_blank" class="view-btn">
+                📄 Қонаев қалалық кандидаттар тізімін қарау (PDF)
+            </a>
+
         </div>
     </div>
-
     <!-- 4-БӨЛІМ -->
     <div class="menu-item">
         <div class="menu-title">4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері</div>
         <div class="menu-content">
-            <p>Ережелерді ашып қарау:</p>
-            <a href="eredzheler.pdf" target="_blank" class="view-btn">
+            <a href="tardip_eredzheleri.pdf" target="_blank" class="view-btn">
                 📄 Тәртіп ережелерін қарау (PDF)
             </a>
         </div>
@@ -173,11 +183,10 @@
 
     <!-- 5-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">5. Бюллютень үлгілері</div>
+        <div class="menu-title">5. Дауыс беруге арналған сайлау бюллетеньдерінің үлгілері</div>
         <div class="menu-content">
-            <p>Бюллетень үлгісін ашып қарау:</p>
-            <a href="byulleten_ulgisi.pdf" target="_blank" class="view-btn">
-                📄 Бюллетень үлгісін қарау (PDF)
+            <a href="byulleten_ulgileri.pdf" target="_blank" class="view-btn">
+                📄 Бюллетень үлгілерін қарау (PDF)
             </a>
         </div>
     </div>
