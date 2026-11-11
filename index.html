@@ -194,17 +194,17 @@
             <div class="sub-title" id="sub3_oblys">📌 Алматы облыстық мәслихатының депутаттығына кандидаттар:</div>
             
             <div class="person-name">1. Алтаев Бахыт Найманович</div>
-            <a href="altaev_kk.pdf" target="_blank" class="view-btn" id="btn_altaev">
+            <a href="altaev.pdf" target="_blank" class="view-btn" id="btn_altaev">
                 📄 Кандидат туралы ақпарат (PDF)
             </a>
 
             <div class="person-name">2. Бейсебаев Тимур Абдукапарович</div>
-            <a href="beisebaev_kk.pdf" target="_blank" class="view-btn" id="btn_beisebaev">
+            <a href="beisebaev.pdf" target="_blank" class="view-btn" id="btn_beisebaev">
                 📄 Кандидат туралы ақпарат (PDF)
             </a>
 
             <div class="person-name">3. Рахманова Бибигул Ербатыровна</div>
-            <a href="rakhmanova_kk.pdf" target="_blank" class="view-btn" id="btn_rakhmanova">
+            <a href="rakhmanova.pdf" target="_blank" class="view-btn" id="btn_rakhmanova">
                 📄 Кандидат туралы ақпарат (PDF)
             </a>
 
@@ -212,17 +212,17 @@
             <div class="sub-title" id="sub3_qonaev" style="margin-top: 20px;">📌 Қонаев қалалық мәслихатының депутаттығына кандидаттар:</div>
 
             <div class="person-name">1. Еділбай Айбол Мұхитұлы</div>
-            <a href="edilbai_kk.pdf" target="_blank" class="view-btn" id="btn_edilbai">
+            <a href="edilbai.pdf" target="_blank" class="view-btn" id="btn_edilbai">
                 📄 Кандидат туралы ақпарат (PDF)
             </a>
 
             <div class="person-name">2. Қалтай Айдар Айбекұлы</div>
-            <a href="qaltai_kk.pdf" target="_blank" class="view-btn" id="btn_qaltai">
+            <a href="qaltai.pdf" target="_blank" class="view-btn" id="btn_qaltai">
                 📄 Кандидат туралы ақпарат (PDF)
             </a>
 
             <div class="person-name">3. Ракишева Айман Галымжановна</div>
-            <a href="rakisheva_kk.pdf" target="_blank" class="view-btn" id="btn_rakisheva">
+            <a href="rakisheva.pdf" target="_blank" class="view-btn" id="btn_rakisheva">
                 📄 Кандидат туралы ақпарат (PDF)
             </a>
 
@@ -291,13 +291,6 @@
             sub3_oblys: "📌 Алматы облыстық мәслихатының депутаттығына кандидаттар:",
             sub3_qonaev: "📌 Қонаев қалалық мәслихатының депутаттығына кандидаттар:",
             btn_cand: "📄 Кандидат туралы ақпарат (PDF)",
-            
-            altaev_url: "altaev_kk.pdf",
-            beisebaev_url: "beisebaev_kk.pdf",
-            rakhmanova_url: "rakhmanova_kk.pdf",
-            edilbai_url: "edilbai_kk.pdf",
-            qaltai_url: "qaltai_kk.pdf",
-            rakisheva_url: "rakisheva_kk.pdf",
 
             t4: "4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері",
             btn4: "📄 Тәртіп ережелерін қарау (PDF)",
@@ -329,13 +322,6 @@
             sub3_oblys: "📌 Кандидаты в депутаты Алматинского областного маслихата:",
             sub3_qonaev: "📌 Кандидаты в депутаты маслихата города Конаев:",
             btn_cand: "📄 Просмотреть информацию о кандидате (PDF)",
-
-            altaev_url: "altaev_ru.pdf",
-            beisebaev_url: "beisebaev_ru.pdf",
-            rakhmanova_url: "rakhmanova_ru.pdf",
-            edilbai_url: "edilbai_ru.pdf",
-            qaltai_url: "qaltai_ru.pdf",
-            rakisheva_url: "rakisheva_ru.pdf",
 
             t4: "4. Правила поведения в помещении для голосования",
             btn4: "📄 Просмотреть правила поведения (PDF)",
@@ -382,7 +368,6 @@
         ['altaev', 'beisebaev', 'rakhmanova', 'edilbai', 'qaltai', 'rakisheva'].forEach(id => {
             const btn = document.getElementById('btn_' + id);
             btn.innerText = data.btn_cand;
-            btn.href = data[id + '_url'];
         });
 
         document.getElementById('t4').innerText = data.t4;
