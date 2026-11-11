@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>№935 Сайлау учаскесі</title>
+    <title>№935 Сайлау учаскесі / Избирательный участок №935</title>
     <style>
         * {
             box-sizing: border-box;
@@ -25,6 +25,28 @@
             border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             padding: 20px;
+        }
+        /* Тілді ауыстыру батырмалары */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .lang-btn {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background-color: #0056b3;
+            color: #ffffff;
+            border-color: #0056b3;
         }
         .header {
             text-align: center;
@@ -127,16 +149,22 @@
 <body>
 
 <div class="container">
+    <!-- Тіл ауыстыру батырмасы -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('kk')">ҚАЗ</button>
+        <button class="lang-btn" onclick="switchLang('ru')">РУС</button>
+    </div>
+
     <div class="header">
-        <h1>№935 Сайлау учаскесі</h1>
-        <p>Ақпараттық портал</p>
+        <h1 id="site-title">№935 Сайлау учаскесі</h1>
+        <p id="site-subtitle">Ақпараттық портал</p>
     </div>
 
     <!-- 1-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">1. №935 сайлау комиссиясының құрамы</div>
+        <div class="menu-title" id="t1">1. №935 сайлау комиссиясының құрамы</div>
         <div class="menu-content">
-            <a href="komissiya.pdf" target="_blank" class="view-btn">
+            <a href="komissiya_kk.pdf" target="_blank" class="view-btn" id="btn1">
                 📄 Комиссия құрамын қарау (PDF)
             </a>
         </div>
@@ -144,38 +172,37 @@
 
     <!-- 2-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">2. Жоғары тұрған сайлау комиссияларының, соттардың, прокуратура мен құқық қорғау органдарының мекенжайлары мен телефондары</div>
+        <div class="menu-title" id="t2">2. Жоғары тұрған сайлау комиссияларының, соттардың, прокуратура мен құқық қорғау органдарының мекенжайлары мен телефондары</div>
         <div class="menu-content">
-            <a href="zhogargy_organdar.pdf" target="_blank" class="view-btn">
+            <a href="zhogargy_organdar_kk.pdf" target="_blank" class="view-btn" id="btn2">
                 📄 Байланыс деректерін қарау (PDF)
             </a>
         </div>
     </div>
 
-   <!-- 3-БӨЛІМ -->
+    <!-- 3-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">3. Партиялық тізімдерді ұсынған саяси партиялар мен кандидаттар туралы ақпарат</div>
+        <div class="menu-title" id="t3">3. Партиялық тізімдерді ұсынған саяси партиялар мен кандидаттар туралы ақпарат</div>
         <div class="menu-content">
             
-            <!-- 3.1 Алматы облысы -->
-            <div class="sub-title">📌 Алматы облыстық мәслихатының депутаттығына кандидаттар:</div>
-            <a href="kandidattar_oblys.pdf" target="_blank" class="view-btn">
+            <div class="sub-title" id="sub3_1">📌 Алматы облыстық мәслихаты бойынша:</div>
+            <a href="kandidattar_oblys_kk.pdf" target="_blank" class="view-btn" id="btn3_1">
                 📄 Облыстық кандидаттар тізімін қарау (PDF)
             </a>
 
-            <!-- 3.2 Қонаев қаласы -->
-            <div class="sub-title">📌 Қонаев қалалық мәслихатының депутаттығына кандидаттар:</div>
-            <a href="kandidattar_qonaev.pdf" target="_blank" class="view-btn">
+            <div class="sub-title" id="sub3_2">📌 Қонаев қалалық мәслихаты бойынша:</div>
+            <a href="kandidattar_qonaev_kk.pdf" target="_blank" class="view-btn" id="btn3_2">
                 📄 Қонаев қалалық кандидаттар тізімін қарау (PDF)
             </a>
 
         </div>
     </div>
+
     <!-- 4-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері</div>
+        <div class="menu-title" id="t4">4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері</div>
         <div class="menu-content">
-            <a href="tardip_eredzheleri.pdf" target="_blank" class="view-btn">
+            <a href="tardip_eredzheleri_kk.pdf" target="_blank" class="view-btn" id="btn4">
                 📄 Тәртіп ережелерін қарау (PDF)
             </a>
         </div>
@@ -183,20 +210,21 @@
 
     <!-- 5-БӨЛІМ -->
     <div class="menu-item">
-        <div class="menu-title">5. Дауыс беруге арналған сайлау бюллетеньдерінің үлгілері</div>
+        <div class="menu-title" id="t5">5. Дауыс беруге арналған сайлау бюллетеньдерінің үлгілері</div>
         <div class="menu-content">
-            <a href="byulleten_ulgileri.pdf" target="_blank" class="view-btn">
+            <a href="byulleten_ulgileri_kk.pdf" target="_blank" class="view-btn" id="btn5">
                 📄 Бюллетень үлгілерін қарау (PDF)
             </a>
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="footer-text">
         © 2026 Сайлау учаскесі
     </div>
 </div>
 
 <script>
+    // Аккордеон ашылу логикасы
     document.querySelectorAll('.menu-title').forEach(item => {
         item.addEventListener('click', () => {
             const parent = item.parentElement;
@@ -208,6 +236,111 @@
             parent.classList.toggle('active');
         });
     });
+
+    // Тілді ауыстыру логикасы
+    const translations = {
+        kk: {
+            title: "№935 Сайлау учаскесі",
+            subtitle: "Ақпараттық портал",
+            t1: "1. №935 сайлау комиссиясының құрамы",
+            btn1: "📄 Комиссия құрамын қарау (PDF)",
+            btn1_url: "komissiya_kk.pdf",
+
+            t2: "2. Жоғары тұрған сайлау комиссияларының, соттардың, прокуратура мен құқық қорғау органдарының мекенжайлары мен телефондары",
+            btn2: "📄 Байланыс деректерін қарау (PDF)",
+            btn2_url: "zhogargy_organdar_kk.pdf",
+
+            t3: "3. Партиялық тізімдерді ұсынған саяси партиялар мен кандидаттар туралы ақпарат",
+            sub3_1: "📌 Алматы облыстық мәслихаты бойынша:",
+            btn3_1: "📄 Облыстық кандидаттар тізімін қарау (PDF)",
+            btn3_1_url: "kandidattar_oblys_kk.pdf",
+
+            sub3_2: "📌 Қонаев қалалық мәслихаты бойынша:",
+            btn3_2: "📄 Қонаев қалалық кандидаттар тізімін қарау (PDF)",
+            btn3_2_url: "kandidattar_qonaev_kk.pdf",
+
+            t4: "4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері",
+            btn4: "📄 Тәртіп ережелерін қарау (PDF)",
+            btn4_url: "tardip_eredzheleri_kk.pdf",
+
+            t5: "5. Дауыс беруге арналған сайлау бюллетеньдерінің үлгілері",
+            btn5: "📄 Бюллетень үлгілерін қарау (PDF)",
+            btn5_url: "byulleten_ulgileri_kk.pdf",
+
+            footer: "© 2026 Сайлау учаскесі"
+        },
+        ru: {
+            title: "Избирательный участок №935",
+            subtitle: "Информационный портал",
+            t1: "1. Состав избирательной комиссии №935",
+            btn1: "📄 Просмотреть состав комиссии (PDF)",
+            btn1_url: "komissiya_ru.pdf",
+
+            t2: "2. Адреса и телефоны вышестоящих избирательных комиссий, судов, органов прокуратуры и правоохранительных органов",
+            btn2: "📄 Просмотреть контактные данные (PDF)",
+            btn2_url: "zhogargy_organdar_ru.pdf",
+
+            t3: "3. Информация о политических партиях, выдвинувших партийные списки, и кандидатах",
+            sub3_1: "📌 По маслихату Алматинской области:",
+            btn3_1: "📄 Просмотреть список областных кандидатов (PDF)",
+            btn3_1_url: "kandidattar_oblys_ru.pdf",
+
+            sub3_2: "📌 По маслихату города Конаев:",
+            btn3_2: "📄 Просмотреть список кандидатов г. Конаев (PDF)",
+            btn3_2_url: "kandidattar_qonaev_ru.pdf",
+
+            t4: "4. Правила поведения в помещении для голосования",
+            btn4: "📄 Просмотреть правила поведения (PDF)",
+            btn4_url: "tardip_eredzheleri_ru.pdf",
+
+            t5: "5. Образцы избирательных бюллетеней для голосования",
+            btn5: "📄 Просмотреть образцы бюллетеней (PDF)",
+            btn5_url: "byulleten_ulgileri_ru.pdf",
+
+            footer: "© 2026 Избирательный участок"
+        }
+    };
+
+    function switchLang(lang) {
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        if(lang === 'kk') {
+            document.querySelectorAll('.lang-btn')[0].classList.add('active');
+        } else {
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+        }
+
+        const data = translations[lang];
+
+        document.getElementById('site-title').innerText = data.title;
+        document.getElementById('site-subtitle').innerText = data.subtitle;
+        
+        document.getElementById('t1').innerText = data.t1;
+        document.getElementById('btn1').innerText = data.btn1;
+        document.getElementById('btn1').href = data.btn1_url;
+
+        document.getElementById('t2').innerText = data.t2;
+        document.getElementById('btn2').innerText = data.btn2;
+        document.getElementById('btn2').href = data.btn2_url;
+
+        document.getElementById('t3').innerText = data.t3;
+        document.getElementById('sub3_1').innerText = data.sub3_1;
+        document.getElementById('btn3_1').innerText = data.btn3_1;
+        document.getElementById('btn3_1').href = data.btn3_1_url;
+
+        document.getElementById('sub3_2').innerText = data.sub3_2;
+        document.getElementById('btn3_2').innerText = data.btn3_2;
+        document.getElementById('btn3_2').href = data.btn3_2_url;
+
+        document.getElementById('t4').innerText = data.t4;
+        document.getElementById('btn4').innerText = data.btn4;
+        document.getElementById('btn4').href = data.btn4_url;
+
+        document.getElementById('t5').innerText = data.t5;
+        document.getElementById('btn5').innerText = data.btn5;
+        document.getElementById('btn5').href = data.btn5_url;
+
+        document.getElementById('footer-text').innerText = data.footer;
+    }
 </script>
 
 </body>
